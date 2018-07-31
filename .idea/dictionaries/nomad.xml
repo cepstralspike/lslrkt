@@ -2,10 +2,15 @@
   <dictionary name="nomad">
     <words>
       <w>additivity</w>
-      <w>hmmss</w>
-      <w>notez</w>
-      <w>ssssss</w>
-      <w>uniq</w>
+      <w>cygpath</w>
+      <w>javacmd</w>
+      <w>logdir</w>
+      <w>lslrkt</w>
+      <w>msys</w>
+      <w>ourcygpattern</w>
+      <w>rootdirs</w>
+      <w>rootdirsraw</w>
+      <w>xdock</w>
     </words>
   </dictionary>
 </component>
