@@ -2,14 +2,19 @@
   <dictionary name="nomad">
     <words>
       <w>additivity</w>
+      <w>aedc</w>
+      <w>brkt</w>
       <w>cygpath</w>
+      <w>hmmss</w>
       <w>javacmd</w>
       <w>logdir</w>
       <w>lslrkt</w>
       <w>msys</w>
       <w>ourcygpattern</w>
+      <w>resultdir</w>
       <w>rootdirs</w>
       <w>rootdirsraw</w>
+      <w>ssssss</w>
       <w>xdock</w>
     </words>
   </dictionary>

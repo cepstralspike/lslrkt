@@ -1,12 +1,18 @@
 import org.apache.logging.log4j.Level
 import org.apache.logging.log4j.LogManager
+import org.apache.logging.log4j.Logger
 import org.apache.logging.log4j.core.appender.ConsoleAppender
 import org.apache.logging.log4j.core.config.Configuration
 import org.apache.logging.log4j.core.config.Configurator
 import org.apache.logging.log4j.core.config.builder.api.*
 import org.apache.logging.log4j.core.config.builder.impl.BuiltConfiguration
-import java.text.SimpleDateFormat
+import java.io.BufferedWriter
+import java.io.File
+import java.io.FileWriter
+import java.net.InetAddress
+import java.nio.file.Paths
 import java.util.*
+
 
 enum class LTyp(val i: Int) {
     Console(0),
@@ -14,7 +20,7 @@ enum class LTyp(val i: Int) {
     Xml(2)
 }
 
-class Log4j2Build {
+class Log(logDirArgString: String = "/tmp") {
     private val lgAppender: MutableMap<LTyp, AppenderComponentBuilder> = mutableMapOf()
     private val lgAppenderRef: MutableMap<LTyp, AppenderRefComponentBuilder> = mutableMapOf()
     private val lgBuilder: MutableMap<LTyp, LoggerComponentBuilder> = mutableMapOf()
@@ -25,11 +31,24 @@ class Log4j2Build {
     private var rootLogger: RootLoggerComponentBuilder
     private var cfg: Configuration
     private var cfgName: String
+    private var trailingSlash = """[${Str.bkSlash}/]$""".toRegex()
+    private val logDirArgStringTrimmed = trailingSlash.replaceFirst(logDirArgString, Str.empty)
+    private val logDirectoryString: String = if (logDirArgStringTrimmed.isEmpty()){
+        "/tmp"
+    }
+    else {
+        logDirArgStringTrimmed
+    }
 
-    var cfgBuilder: ConfigurationBuilder<BuiltConfiguration>
+    private var cfgBuilder: ConfigurationBuilder<BuiltConfiguration>
+
+    companion object {
+        lateinit var toConsole: Logger
+        lateinit var toTxtFile: Logger
+        lateinit var toXmlFile: Logger
+    }
 
     init {
-        val now = Date()
         val r = Random()
         val tagMap: MutableMap<LTyp, Int> = mutableMapOf(
                 LTyp.Console to 0,
@@ -38,7 +57,7 @@ class Log4j2Build {
         )
         val rndTagSet: MutableSet<Int> = mutableSetOf()
 
-        while ( rndTagSet.size != tagMap.size){
+        while (rndTagSet.size != tagMap.size) {
             //
             // Fill set with random integers
             //
@@ -47,7 +66,7 @@ class Log4j2Build {
         }
 
         val tagSetElement = rndTagSet.iterator()
-        for(mapKey in tagMap.keys){
+        for (mapKey in tagMap.keys) {
             //
             // Associate random integer with each log type tag
             //
@@ -55,21 +74,56 @@ class Log4j2Build {
 
         }
 
-        val fileNameStamp = SimpleDateFormat("yyyyMMdd.HHmmss.SSSSSS").format(now)
+        val checkLogDirectory: File? = Paths.get(logDirectoryString).toFile()
+        if (null == checkLogDirectory) {
+            val errMsg = """ERROR: 800979A6 >>>>> **
+                            | Paths.get($logDirectoryString).toFile()
+                            | RETURNED A NULL LOG DIRECTORY PATH NOT FOUND **""".trimMargin()
+            println(errMsg)
+            throw Exception(IllegalAccessException(errMsg))
+        }
+
+
+        val fileNameStamp = String.format(
+                "%s.%s",
+                FTStamp.value,
+                InetAddress.getLocalHost().hostName
+        )
         val lgFileName: MutableMap<LTyp, String> = mutableMapOf()
         val patternDateSpec = "%replace{%replace{%d{ISO8601_BASIC}}{T}{.}}{,}{.}"
         val patternSpec = "$patternDateSpec %-5level: [%t:%F:%L] %msg %n%throwable"
 
         lgFileName[LTyp.Txt] = String.format(
-                "/tmp/%s.%04X.log4j.log",
+                "%s/%s.%04X.log4j.log",
+                logDirectoryString,
                 fileNameStamp,
                 tagMap[LTyp.Txt]
         )
+
+
         lgFileName[LTyp.Xml] = String.format(
-                "/tmp/%s.%04X.log4j.Xml",
+                "%s/%s.%04X.log4j.Xml",
+                logDirectoryString,
                 fileNameStamp,
                 tagMap[LTyp.Xml]
         )
+
+
+        val lfNames = listOf(lgFileName[LTyp.Txt], lgFileName[LTyp.Xml])
+        for (lfName in lfNames) {
+            try {
+                val verify = BufferedWriter(FileWriter(lfName, true))
+                verify.write("")
+                verify.close()
+            } catch (error: Throwable) {
+                val errMsg = """ERROR: A2E2390A >>>>> **
+                            | AccessController.checkPermission(FilePermission($lfName, "write"))
+                            | DIRECTORY IS NOT WRITEABLE **""".trimMargin()
+                println(errMsg)
+                error(message = errMsg)
+                throw Exception(error)
+            }
+        }
 
         cfgName = String.format(
                 "Log4j2Cfg%04X",
@@ -167,8 +221,8 @@ class Log4j2Build {
         Configurator.setLevel(lgLoggerName[LTyp.Txt], Level.TRACE)
         Configurator.setLevel(lgLoggerName[LTyp.Xml], Level.TRACE)
 
-        Log.toConsole = LogManager.getLogger(lgLoggerName[LTyp.Console])
-        Log.toTxtFile = LogManager.getLogger(lgLoggerName[LTyp.Txt])
-        Log.toXmlFile = LogManager.getLogger(lgLoggerName[LTyp.Xml])
+        toConsole = LogManager.getLogger(lgLoggerName[LTyp.Console])
+        toTxtFile = LogManager.getLogger(lgLoggerName[LTyp.Txt])
+        toXmlFile = LogManager.getLogger(lgLoggerName[LTyp.Xml])
     }
 }
