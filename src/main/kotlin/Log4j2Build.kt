@@ -117,8 +117,8 @@ class Log(logDirArgString: String = "/tmp") {
                 verify.close()
             } catch (error: Throwable) {
                 val errMsg = """ERROR: A2E2390A >>>>> **
-                            | AccessController.checkPermission(FilePermission($lfName, "write"))
-                            | DIRECTORY IS NOT WRITEABLE **""".trimMargin()
+                            | verify = BufferedWriter(FileWriter($lfName, true)) FAILED
+                            | $lfName IS NOT WRITEABLE **""".trimMargin()
                 println(errMsg)
                 error(message = errMsg)
                 throw Exception(error)

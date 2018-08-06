@@ -123,6 +123,20 @@ object TStamp {
         }
 }
 
+object Bit {
+    val map = mapOf(
+            PosixFilePermission.valueOf("OWNER_READ") to 0b100000000L,
+            PosixFilePermission.valueOf("OWNER_WRITE") to 0b010000000L,
+            PosixFilePermission.valueOf("OWNER_EXECUTE") to 0b001000000L,
+            PosixFilePermission.valueOf("GROUP_READ") to 0b000100000L,
+            PosixFilePermission.valueOf("GROUP_WRITE") to 0b000010000L,
+            PosixFilePermission.valueOf("GROUP_EXECUTE") to 0b000001000L,
+            PosixFilePermission.valueOf("OTHERS_READ") to 0b000000100L,
+            PosixFilePermission.valueOf("OTHERS_WRITE") to 0b000000010L,
+            PosixFilePermission.valueOf("OTHERS_EXECUTE") to 0b000000001L
+    )
+}
+
 data class FSysRecorder(
         private val resultsDirectoryString: String = "/tmp",
         private val topNodeString: String = "/") {
@@ -155,7 +169,7 @@ data class FSysRecorder(
     )
 
     init {
-        vfyWrtAccess(rawFileName, "4C288E0E")
+        vfyWrtAccess(rawFileName, "4C288E0E") // we're pretty much dead if this fails
     }
     private val raw = BufferedWriter(FileWriter(rawFileName, true))
     private val cartonLimit = 4096
@@ -168,8 +182,11 @@ data class FSysRecorder(
     //
     private fun dumpCarton() {
         //
-        // The 'Carton' files are smaller fixed length csv files
-        // that will be merged is the last faze of the filesystem scan
+        // A carton treemap (sorted by absolute path name) is filled as the
+        // scan proceeds. The number of csv records (lines) in a carton is
+        // cartonLimit. Once the treemap reaches that limit it is written
+        // out to a file. All the files will be merged in the last faze of
+        // the filesystem scan
         //
         val sortedCartonFileName = String.format(
                 "%s/%s.%04d.tox.srt",
@@ -177,20 +194,7 @@ data class FSysRecorder(
                 FTStamp.value,
                 cartonCount++
         )
-        vfyWrtAccess(sortedCartonFileName, "244331B3")
-        try {
-            val verify = BufferedWriter(FileWriter(sortedCartonFileName, true))
-            verify.write("<!-- **$verify** -->\n\n")
-            verify.flush()
-            verify.close()
-            Files.delete(Paths.get(sortedCartonFileName))
-        } catch (error: Throwable) {
-            val errMsg = """ERROR: A2E2390A >>>>> **
-                            | AccessController.checkPermission(FilePermission($sortedCartonFileName, "write"))
-                            | DIRECTORY IS NOT WRITEABLE **""".trimMargin()
-            println(errMsg)
-            error(message = errMsg)
-        }
+        vfyWrtAccess(sortedCartonFileName, "244331B3") // we're pretty much dead if this fails
         val sortedCartonOutFileHandle = BufferedWriter(FileWriter(sortedCartonFileName, true))
         for (k in carton.keys) {
             sortedCartonOutFileHandle.write(carton[k])
@@ -208,10 +212,14 @@ data class FSysRecorder(
         )
     }
 
-    fun write(dataOut: FSysNode) {
+    fun add2carton(dataOut: FSysNode) {
         val csvStr = "${dataOut.flatView(RecordNumber.update)}\n"
+        //
+        // also write to raw (unsorted) file to facilitate sort
+        // verification/validation
+        //
         raw.write(csvStr)
-        carton[dataOut.absolutePath] = csvStr
+        carton[dataOut.absolutePath] = csvStr // entries placed in sorted map
         if (0 == carton.size % cartonLimit) {
             dumpCarton()
         }
@@ -244,7 +252,7 @@ data class FSysRecorder(
     }
 
     private fun mergeTheCartons(): String {
-        vfyWrtAccess(finalSortedFileName, "ADE1AEDC")
+        vfyWrtAccess(finalSortedFileName, "ADE1AEDC")  // we're pretty much dead if this fails
         val finalSortedFileHandle = BufferedWriter(FileWriter(finalSortedFileName, true))
         while (Cupboard.shelf.size > 1) {
             processNextEntry(finalSortedFileHandle)
@@ -280,7 +288,7 @@ data class FSysRecorder(
             val error = """ERROR: processNextEntry(outFile: BufferedWriter) >>>>> **
                                 | Cupboard.shelf.keys = ${Cupboard.shelf.keys}
                                 | Cupboard.shelf.keys.checkMinKey() is NULL **""".trimMargin()
-            Log.toTxtFile.warn(error)
+            Log.toTxtFile.fatal(error)
             throw Exception(error)
         }
         val checkBoxTop: Cupboard.BoxTop? = Cupboard.shelf[minKey]
@@ -309,7 +317,6 @@ data class FSysRecorder(
 }
 
 data class FSysNode(var f: File) {
-    private val bitMap = FSysNode.bitMap()
     private val checkPath: Path? = f.toPath()
     val path = if (checkPath != null) {
         checkPath
@@ -384,7 +391,7 @@ data class FSysNode(var f: File) {
 
     private val bAttrL: BasicFileAttributes = attr
 
-    val realPath: String
+    private val realPath: String
         get() = if ("L" == typeFDLU(bAttr)) {
             " -> ${f.toPath().toRealPath()}"
         } else {
@@ -401,33 +408,20 @@ data class FSysNode(var f: File) {
         throw Exception(error)
     }
     val iNodeStr = iNode.toString()
-    var permBits = 0b1000000000 // 10 bits
+    var permBits: Long = 0b1000000000L // 10 bits
 
     init {
         pAttr.permissions().forEach {
-            permBits = permBits or bitMask(bitMap[it])
+            permBits = permBits or bitMask(Bit.map[it])
         }
     }
 
-    val permBitString = permBits.toString(2).substring(1) // 9 bits
+    private val permBitString = permBits.toString(2).substring(1) // 9 bits
+    private val permOctString = java.lang.Long.toOctalString(
+            java.lang.Long.parseLong(permBitString, 2)
+    )
 
-    companion object {
-        fun bitMap(): Map<Enum<PosixFilePermission>, Int> {
-            return mapOf(
-                    PosixFilePermission.valueOf("OWNER_READ") to 0b100000000,
-                    PosixFilePermission.valueOf("OWNER_WRITE") to 0b010000000,
-                    PosixFilePermission.valueOf("OWNER_EXECUTE") to 0b001000000,
-                    PosixFilePermission.valueOf("GROUP_READ") to 0b000100000,
-                    PosixFilePermission.valueOf("GROUP_WRITE") to 0b000010000,
-                    PosixFilePermission.valueOf("GROUP_EXECUTE") to 0b000001000,
-                    PosixFilePermission.valueOf("OTHERS_READ") to 0b000000100,
-                    PosixFilePermission.valueOf("OTHERS_WRITE") to 0b000000010,
-                    PosixFilePermission.valueOf("OTHERS_EXECUTE") to 0b000000001
-            )
-        }
-    }
-
-    private fun bitMask(p: Int?): Int {
+    private fun bitMask(p: Long?): Long {
         return p ?: 0
     }
 
@@ -450,7 +444,7 @@ data class FSysNode(var f: File) {
         }
     }
 
-    val typeCode: String
+    private val typeCode: String
         get() {
             val firstLetter = typeFDLU(bAttr)
             return if ("L" == firstLetter) {
@@ -460,7 +454,7 @@ data class FSysNode(var f: File) {
             }
         }
 
-    val modTime: String
+    private val modTime: String
         get() {
             val fModTimeI = bAttr.lastModifiedTime().toInstant()
             val fModTimeLDT = LocalDateTime.ofInstant(fModTimeI, ZoneId.systemDefault())
@@ -483,7 +477,7 @@ data class FSysNode(var f: File) {
                 Str.ctrlA,
                 typeCode,
                 Str.ctrlA,
-                permBitString,
+                permOctString,
                 Str.ctrlA,
                 modTime,
                 Str.ctrlA,
@@ -493,25 +487,6 @@ data class FSysNode(var f: File) {
                 realPath)
     }
 }
-
-//data class FSysNodeFields(val recordTag: String,
-//                          val typeCode: String,
-//                          val permBitString: String,
-//                          val modTime: String,
-//                          val size: Long,
-//                          val absolutePath: String,
-//                          val realPath: String
-//) {
-//    constructor(tag: String, ancestor: FSysNode) : this(
-//            tag,
-//            ancestor.typeCode,
-//            ancestor.permBitString,
-//            ancestor.modTime,
-//            ancestor.size,
-//            ancestor.absolutePath,
-//            ancestor.realPath)
-//
-//}
 
 class FSystemScan(topNodeArgString: String = "/",
                   resultsDirArgString: String = "/tmp") {
@@ -583,7 +558,7 @@ class FSystemScan(topNodeArgString: String = "/",
         directoriesToScan.push(topNode)
         SubTree.ok2Traverse[topNodeInfo.iNodeStr] = true
         val fSysRecorder = FSysRecorder(resultsDirectoryString, topNodeString)
-        fSysRecorder.write(topNodeInfo)
+        fSysRecorder.add2carton(topNodeInfo)
         Log.toTxtFile.info("TOP NODE == $topNodeString")
 
         mainloop@ while (0 != directoriesToScan.count()) {
@@ -603,7 +578,7 @@ class FSystemScan(topNodeArgString: String = "/",
                 // I have seen cases on Windows when an API cannot
                 // distinguish a link to a directory from an actual
                 // directory. This causes an infinite recurse. That's bad.
-                // so I keep track of all the directories I descend
+                // so I try to keep track of all the directories I descend
                 // making sure I travers each directory exactly once.
                 //
                 try {
@@ -661,7 +636,7 @@ class FSystemScan(topNodeArgString: String = "/",
                             }
                             try {
                                 val nodeInfo = FSysNode(directoryEntry)
-                                fSysRecorder.write(nodeInfo)
+                                fSysRecorder.add2carton(nodeInfo)
                                 if (0L == RecordNumber.tally % 0x3FFFF) {
                                     Log.toConsole.info("FILE SYSTEM ENTRIES CAPTURED == ${RecordNumber.tally}")
                                 }
@@ -712,7 +687,7 @@ class FSystemScan(topNodeArgString: String = "/",
 fun vfyWrtAccess(pathString:String, tag: String){
     try {
         //
-        // if no error is thrown, then write access is verified
+        // if no error is thrown, then add2carton access is verified
         //
         val verify = BufferedWriter(FileWriter(pathString, true))
         verify.write(Str.empty)
