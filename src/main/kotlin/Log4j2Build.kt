@@ -9,6 +9,7 @@ import org.apache.logging.log4j.core.config.builder.impl.BuiltConfiguration
 import java.io.BufferedWriter
 import java.io.File
 import java.io.FileWriter
+import java.io.IOException
 import java.net.InetAddress
 import java.nio.file.Paths
 import java.util.*
@@ -20,7 +21,15 @@ enum class LTyp(val i: Int) {
     Xml(2)
 }
 
-class Log(logDirArgString: String = "/tmp") {
+fun checkPath(s: String): String {
+    try {
+        return File(s).canonicalPath.toString()
+    } catch (err: Exception) {
+        throw IOException("** FATAL: PATH [ $s ] CANNOT BE RECONCILED. **")
+    }
+}
+//
+class Log(logDirectoryString: String = "/tmp") {
     private val lgAppender: MutableMap<LTyp, AppenderComponentBuilder> = mutableMapOf()
     private val lgAppenderRef: MutableMap<LTyp, AppenderRefComponentBuilder> = mutableMapOf()
     private val lgBuilder: MutableMap<LTyp, LoggerComponentBuilder> = mutableMapOf()
@@ -31,15 +40,6 @@ class Log(logDirArgString: String = "/tmp") {
     private var rootLogger: RootLoggerComponentBuilder
     private var cfg: Configuration
     private var cfgName: String
-    private var trailingSlash = """[${Str.bkSlash}/]$""".toRegex()
-    private val logDirArgStringTrimmed = trailingSlash.replaceFirst(logDirArgString, Str.empty)
-    private val logDirectoryString: String = if (logDirArgStringTrimmed.isEmpty()){
-        "/tmp"
-    }
-    else {
-        logDirArgStringTrimmed
-    }
-
     private var cfgBuilder: ConfigurationBuilder<BuiltConfiguration>
 
     companion object {
@@ -93,24 +93,28 @@ class Log(logDirArgString: String = "/tmp") {
         val patternDateSpec = "%replace{%replace{%d{ISO8601_BASIC}}{T}{.}}{,}{.}"
         val patternSpec = "$patternDateSpec %-5level: [%t:%F:%L] %msg %n%throwable"
 
-        lgFileName[LTyp.Txt] = String.format(
+        lgFileName[LTyp.Txt] = checkPath(String.format(
                 "%s/%s.%04X.log4j.log",
                 logDirectoryString,
                 fileNameStamp,
                 tagMap[LTyp.Txt]
-        )
+        ))
 
 
-        lgFileName[LTyp.Xml] = String.format(
+        lgFileName[LTyp.Xml] = checkPath(String.format(
                 "%s/%s.%04X.log4j.Xml",
                 logDirectoryString,
                 fileNameStamp,
                 tagMap[LTyp.Xml]
-        )
+        ))
 
 
         val lfNames = listOf(lgFileName[LTyp.Txt], lgFileName[LTyp.Xml])
         for (lfName in lfNames) {
+            //
+            // cannot call vfyWrtAccess here because log
+            // is not set up yet
+            //
             try {
                 val verify = BufferedWriter(FileWriter(lfName, true))
                 verify.write("")
