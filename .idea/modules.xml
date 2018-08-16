@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ExternalModuleListStorage">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/lslrkt.iml" filepath="$PROJECT_DIR$/.idea/modules/lslrkt.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/lslrkt_main.iml" filepath="$PROJECT_DIR$/.idea/modules/lslrkt_main.iml" group="lslrkt" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/lslrkt_test.iml" filepath="$PROJECT_DIR$/.idea/modules/lslrkt_test.iml" group="lslrkt" />
+    </modules>
+  </component>
+</project>
