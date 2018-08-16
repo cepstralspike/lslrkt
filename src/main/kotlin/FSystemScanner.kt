@@ -20,9 +20,9 @@ object Str {
     const val tab = 9.toChar().toString()
     const val ctrlA = 1.toChar().toString()
     const val dblQt = 34.toChar().toString()
-    //const val lSqBrkt = 91.toChar().toString()
+    const val lSqBrkt = 91.toChar().toString()
     const val bkSlash = 92.toChar().toString()
-    //const val rSqBrkt = 91.toChar().toString()
+    const val rSqBrkt = 93.toChar().toString()
     const val empty = ""
 }
 
@@ -56,20 +56,20 @@ object RecordNumber {
 
 class Stack<T : Comparable<T>>(list: MutableList<T>) {
     var items: MutableList<T> = list
-    private fun isEmpty(): Boolean = this.items.isEmpty()
-    fun count(): Int = this.items.count()
+    private fun isEmpty(): Boolean = items.isEmpty()
+    fun count(): Int = items.count()
     fun push(element: T) {
         val position = this.count()
-        this.items.add(position, element)
+        items.add(position, element)
     }
 
-    override fun toString() = this.items.toString()
+    override fun toString() = items.toString()
     fun pop(): T? {
         return if (this.isEmpty()) {
             null
         } else {
-            val item = this.items.count() - 1
-            this.items.removeAt(item)
+            val item = items.count() - 1
+            items.removeAt(item)
         }
     }
 
@@ -148,34 +148,38 @@ data class FSysRecorder(
                 val fN: String,
                 var csv: String
         )
-
         var shelf: TreeMap<String, BoxTop> = TreeMap()
     }
 
     private val topNodeTag = transformTopNodeString(topNodeString)
-    private val rawFileName = String.format(
+    private val rawFileName = checkPath(String.format(
             "%s/%s.%s.%s.tox.raw",
             resultsDirectoryString,
             FTStamp.value,
             InetAddress.getLocalHost().hostName,
             topNodeTag
-    )
-    private val finalSortedFileName = String.format(
+    ))
+    private val rawWrtOK = vfyWrtAccess(rawFileName, "4C288E0E") // we`re pretty much dead if this fails
+
+    private val finalSortedFileName = checkPath(String.format(
             "%s/%s.%s.%s.tox.srt",
             resultsDirectoryString,
             FTStamp.value,
             InetAddress.getLocalHost().hostName,
             topNodeTag
-    )
+    ))
+    private val srtWrtOK = vfyWrtAccess(finalSortedFileName, "ADE1AEDC")  // we`re pretty much dead if this fails
 
-    init {
-        vfyWrtAccess(rawFileName, "4C288E0E") // we're pretty much dead if this fails
-    }
+
     private val raw = BufferedWriter(FileWriter(rawFileName, true))
     private val cartonLimit = 4096
     private var cartonCount = 1
-
     private val carton: TreeMap<String, String> = TreeMap()
+
+    init {
+        Log.toTxtFile.trace("""$rawWrtOK == vfyWrtAccess($rawFileName, 0A26ED76)""")
+        Log.toTxtFile.trace("""$srtWrtOK == vfyWrtAccess($finalSortedFileName, 927E8146)""")
+    }
     //
     // ONLY FUNCTIONS AND INNER CLASSES SHOULD
     // BE PLACED IN FSysRecorder AFTER THIS POINT
@@ -194,7 +198,7 @@ data class FSysRecorder(
                 FTStamp.value,
                 cartonCount++
         )
-        vfyWrtAccess(sortedCartonFileName, "244331B3") // we're pretty much dead if this fails
+        vfyWrtAccess(sortedCartonFileName, "244331B3") // we`re pretty much dead if this fails
         val sortedCartonOutFileHandle = BufferedWriter(FileWriter(sortedCartonFileName, true))
         for (k in carton.keys) {
             sortedCartonOutFileHandle.write(carton[k])
@@ -252,7 +256,7 @@ data class FSysRecorder(
     }
 
     private fun mergeTheCartons(): String {
-        vfyWrtAccess(finalSortedFileName, "ADE1AEDC")  // we're pretty much dead if this fails
+        vfyWrtAccess(finalSortedFileName, "BBB9583C")  // we`re pretty much dead if this fails
         val finalSortedFileHandle = BufferedWriter(FileWriter(finalSortedFileName, true))
         while (Cupboard.shelf.size > 1) {
             processNextEntry(finalSortedFileHandle)
@@ -488,39 +492,21 @@ data class FSysNode(var f: File) {
     }
 }
 
-class FSystemScan(topNodeArgString: String = "/",
-                  resultsDirArgString: String = "/tmp") {
-
-    var trailingSlash = """[${Str.bkSlash}/]$""".toRegex()
-
-    private val resultsDirStringTrimmed = trailingSlash.replaceFirst(resultsDirArgString, Str.empty)
-    private val resultsDirectoryString: String = if (resultsDirStringTrimmed.isEmpty()){
-        "/tmp"
-    }
-    else {
-        resultsDirStringTrimmed
-    }
-
-    private val topNodeArgStringTrimmed = trailingSlash.replaceFirst(topNodeArgString, Str.empty)
-    private val topNodeString: String = if (topNodeArgStringTrimmed.isEmpty()){
-        "/"
-    }
-    else {
-        topNodeArgStringTrimmed
-    }
+data class FSystemScan(var topNodeString: String = "/",
+                       var resultsDirString: String = "/tmp") {
 
     init {
         val skipList = mapOf(
-                "/proc" to true,
+                "/proc" to true ,
                 "/media" to true
         )
 
-        val checkResultsDirectory: File? = Paths.get(resultsDirectoryString).toFile()
+        val checkResultsDirectory: File? = Paths.get(resultsDirString).toFile()
         val resultsDirectory: File = if (checkResultsDirectory != null) {
             checkResultsDirectory
         } else {
             val error = """ERROR: ${RecordNumber.request} >>>>> **
-                            | Paths.get($resultsDirectoryString).toFile()
+                            | Paths.get($resultsDirString).toFile()
                             | RETURNED A NULL RESULTS DIRECTORY PATH NOT FOUND **""".trimMargin()
             Log.toConsole.fatal(error)
             throw Exception(error)
@@ -529,7 +515,7 @@ class FSystemScan(topNodeArgString: String = "/",
         val resultsDirectoryInfo = FSysNode(resultsDirectory)
         if (!resultsDirectoryInfo.bAttr.isDirectory) {
             val error = """ERROR: ${RecordNumber.request} >>>>> **
-                            | Paths.get($resultsDirectoryString).toFile()
+                            | Paths.get($resultsDirString).toFile()
                             | RETURNED AN ENTRY THAT IS NOT A DIRECTORY **""".trimMargin()
             Log.toConsole.fatal(error)
             throw Exception(error)
@@ -557,7 +543,7 @@ class FSystemScan(topNodeArgString: String = "/",
         }
         directoriesToScan.push(topNode)
         SubTree.ok2Traverse[topNodeInfo.iNodeStr] = true
-        val fSysRecorder = FSysRecorder(resultsDirectoryString, topNodeString)
+        val fSysRecorder = FSysRecorder(resultsDirString, topNodeString)
         fSysRecorder.add2carton(topNodeInfo)
         Log.toTxtFile.info("TOP NODE == $topNodeString")
 
@@ -577,7 +563,7 @@ class FSystemScan(topNodeArgString: String = "/",
                 //
                 // I have seen cases on Windows when an API cannot
                 // distinguish a link to a directory from an actual
-                // directory. This causes an infinite recurse. That's bad.
+                // directory. This causes an infinite recurse. That`s bad.
                 // so I try to keep track of all the directories I descend
                 // making sure I travers each directory exactly once.
                 //
@@ -668,7 +654,7 @@ class FSystemScan(topNodeArgString: String = "/",
                         is java.io.UncheckedIOException,
                         is java.nio.file.FileSystemException,
                         is java.nio.file.AccessDeniedException -> {
-                            Log.toTxtFile.warn("ERROR: ${RecordNumber.request} >>>>> $error")
+                            Log.toTxtFile.warn("ERROR: ${RecordNumber.request} >>>>> ${Str.lSqBrkt} $error ${Str.rSqBrkt}")
                             continue@mainloop
                         }
                         else -> throw error
@@ -682,16 +668,18 @@ class FSystemScan(topNodeArgString: String = "/",
         Log.toConsole.info("FILE SYSTEM ENTRIES RECURSIVELY CAPTURED FROM ${Str.dblQt}$topNodeString${Str.dblQt} == ${RecordNumber.tally}")
         Log.toConsole.info("SEE RESULTS IN $finalOutputFile")
     }
+
 }
 
-fun vfyWrtAccess(pathString:String, tag: String){
+fun vfyWrtAccess(pathString: String, tag: String) : Boolean {
     try {
         //
-        // if no error is thrown, then add2carton access is verified
+        // if no error is thrown, then write access is verified
         //
         val verify = BufferedWriter(FileWriter(pathString, true))
         verify.write(Str.empty)
         verify.close()
+        return true
     } catch (error: Throwable) {
         val errMsg = """ERROR: $tag >>>>> **
                             | ATTEMPTED::
@@ -703,71 +691,31 @@ fun vfyWrtAccess(pathString:String, tag: String){
     }
 }
 
-
 fun transformTopNodeString(s: String): String {
-
     Log.toTxtFile.trace("""transformTopNodeString: received $s""")
-
-    val retVal = fixConsecutivePeriods(
-            fixAnySlashes(
-                    fixLeadingSlash(
-                            fixLeadingPeriod(
-                                    fixTrailingSlashes(
-                                            fixConsecutiveSlashes(s)
-                                    )
-                            )
-                    )
-            )
-
-    )
+    val retVal = ttnsFixOtherSlashes(ttnsFixLeadingSlash(s))
     Log.toTxtFile.trace("""transformTopNodeString produced $retVal""")
     return retVal
 }
 
-fun fixConsecutiveSlashes(s:String):String {
-    // replace consecutive "/" characters with a single "/" character
-    Log.toTxtFile.trace("""fixConsecutiveSlashes received $s""")
-    val retVal = s.replace("""[${Str.bkSlash}/]+""".toRegex(), "/")
-    Log.toTxtFile.trace("""fixConsecutiveSlashes produced $retVal""")
-    return retVal
-}
-
-fun fixTrailingSlashes(s:String):String {
-    // delete trailing slash
-    Log.toTxtFile.trace("""fixTrailingSlashes received $s""")
-    val retVal = s.replace("""[${Str.bkSlash}/]$""".toRegex(), Str.empty)
-    Log.toTxtFile.trace("""fixTrailingSlashes produced $retVal""")
-    return retVal
-}
-
-fun fixLeadingPeriod(s:String):String {
-    // replace leading "." with "dot."
-    Log.toTxtFile.trace("""fixLeadingPeriod received $s""")
-    val retVal = s.replace("""^[.]""".toRegex(), "dot.")
-    Log.toTxtFile.trace("""fixLeadingPeriod produced $retVal""")
-    return retVal
-}
-
-fun fixLeadingSlash(s:String):String {
+fun ttnsFixLeadingSlash(s: String): String {
     // replace leading slash with "slash."
-    Log.toTxtFile.trace("""fixLeadingSlash received $s""")
-    val retVal = s.replace("""^[${Str.bkSlash}/]""".toRegex(), "slash.")
-    Log.toTxtFile.trace("""fixLeadingSlash produced $retVal""")
-    return retVal
+    Log.toTxtFile.trace("""ttnsFixLeadingSlash received $s""")
+    return if ("/" == s) {
+        val retVal = "slash"
+        Log.toTxtFile.trace("""ttnsFixLeadingSlash produced $retVal""")
+        retVal
+    } else {
+        val retVal = s.replace("""^[${Str.bkSlash}/]""".toRegex(), "slash.")
+        Log.toTxtFile.trace("""ttnsFixLeadingSlash produced $retVal""")
+        retVal
+    }
 }
 
-fun fixAnySlashes(s:String):String {
-    // replace any and all '/' with '.'
-    Log.toTxtFile.trace("""fixAnySlashes received $s""")
+fun ttnsFixOtherSlashes(s: String): String {
+    // replace any and all `[\/]` with `.`
+    Log.toTxtFile.trace("""ttnsFixOtherSlashes received $s""")
     val retVal = s.replace("""[${Str.bkSlash}/]""".toRegex(), ".")
-    Log.toTxtFile.trace("""fixAnySlashes produced $retVal""")
-    return retVal
-}
-
-fun fixConsecutivePeriods(s:String):String {
-    // replace consecutive periods with a single period
-    Log.toTxtFile.trace("""fixConsecutivePeriods received $s""")
-    val retVal = s.replace("""[.]+""".toRegex(), ".")
-    Log.toTxtFile.trace("""fixConsecutivePeriods produced $retVal""")
+    Log.toTxtFile.trace("""ttnsFixOtherSlashes produced $retVal""")
     return retVal
 }
