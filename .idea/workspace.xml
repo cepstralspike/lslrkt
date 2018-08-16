@@ -1,0 +1,1080 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AnalysisUIOptions">
+    <option name="SCOPE_TYPE" value="8" />
+    <option name="CUSTOM_SCOPE_NAME" value="Current File" />
+  </component>
+  <component name="BookmarkManager">
+    <bookmark url="file://$PROJECT_DIR$/src/main/kotlin/FSystemScanner.kt" line="346" />
+    <bookmark url="file://$PROJECT_DIR$/src/main/kotlin/FSystemScanner.kt" line="139" />
+    <bookmark url="file://$PROJECT_DIR$/src/main/kotlin/FSystemScanner.kt" line="569" />
+    <bookmark url="file://$PROJECT_DIR$/src/main/kotlin/FSystemScanner.kt" line="717" />
+    <bookmark url="file://$PROJECT_DIR$/src/main/kotlin/Log4j2Build.kt" line="99" />
+    <bookmark url="file://$PROJECT_DIR$/src/main/kotlin/FSystemScanner.kt" line="656" />
+    <bookmark url="file://$PROJECT_DIR$/src/main/kotlin/Log4j2Build.kt" line="112" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="54234041-94dd-48d5-96af-f86ddb9d0d91" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/nomad.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/nomad.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/lslrkt_main.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/lslrkt_main.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/lslrkt_test.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/lslrkt_test.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/Entrypt.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Entrypt.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/FSystemScanner.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/FSystemScanner.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/Log4j2Build.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Log4j2Build.kt" afterDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/out/" />
+    <ignored path="$PROJECT_DIR$/.gradle/" />
+    <ignored path="$PROJECT_DIR$/build/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CheckStyle-IDEA-workspace">
+    <option name="configuration">
+      <map>
+        <entry key="last-active-plugin-version" value="5.21.1" />
+      </map>
+    </option>
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="lslrkt" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="lslrkt" type="f1a62948:ProjectNode" />
+                <item name="Source Sets" type="e897c970:GradleViewContributor$SourceSetsNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="lslrkt" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="lslrkt" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="build" type="c8890929:TasksNode$1" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="-888062401">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="6" />
+          <entry key="project.open.time.2" value="3" />
+          <entry key="project.open.time.20" value="2" />
+          <entry key="project.open.time.22" value="2" />
+          <entry key="project.open.time.4" value="1" />
+          <entry key="project.opened" value="8" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="kt" value="4" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="Kotlin" value="4" />
+        </counts>
+      </usages-collector>
+    </session>
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="lslrkt" />
+  </component>
+  <component name="FileEditorManager">
+    <splitter split-orientation="horizontal" split-proportion="0.5858209">
+      <split-first>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/kotlin/Entrypt.kt">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="207">
+                  <caret line="13" selection-start-line="6" selection-end-line="13" />
+                  <folding>
+                    <element signature="e#0#207#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/main/kotlin/Log4j2Build.kt">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="75">
+                  <caret line="30" column="2" selection-start-line="30" selection-start-column="2" selection-end-line="30" selection-end-column="2" />
+                  <folding>
+                    <element signature="e#0#607#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-first>
+      <split-second>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/kotlin/Log4j2Build.kt">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="1633">
+                  <caret line="85" selection-start-line="85" selection-end-line="85" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/main/kotlin/FSystemScanner.kt">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="60">
+                  <caret line="673" column="16" selection-start-line="673" selection-start-column="4" selection-end-line="673" selection-end-column="16" />
+                  <folding>
+                    <element signature="e#0#527#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-second>
+    </splitter>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Kotlin File" />
+        <option value="Kotlin Class" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>bitMap</find>
+      <find>bitMask</find>
+      <find>pAttr</find>
+      <find>L,</find>
+      <find>flatview</find>
+      <find>processNextEntry</find>
+      <find>carton</find>
+      <find>dumpCarton</find>
+      <find>try</find>
+      <find>FSysNode</find>
+      <find>FSysRecorder</find>
+      <find>resultsDirArgS</find>
+      <find>trailingSlash</find>
+      <find>transformTopNodeString</find>
+      <find>FSystemScan</find>
+      <find>logdir</find>
+      <find>[</find>
+      <find>Log.toTxtFile</find>
+      <find>vfyWrtAccess</find>
+      <find>finalSortedFileName</find>
+      <find>4C288E0E</find>
+      <find>927E8146</find>
+      <find>0A26ED76</find>
+      <find>ADE1AEDC</find>
+      <find>BBB9583C</find>
+      <find>BufferedWriter</find>
+      <find>'</find>
+      <find>&quot;</find>
+      <find>writable</find>
+      <find>A2E2390A</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>toConsole.info</replace>
+      <replace>resultDirectoryString</replace>
+      <replace>resultsDirectoryString</replace>
+      <replace>results</replace>
+      <replace>Results</replace>
+      <replace>Chr.tab</replace>
+      <replace>Chr.dblQt</replace>
+      <replace>tagStr</replace>
+      <replace>Chr.empty</replace>
+      <replace>Integer</replace>
+      <replace>,</replace>
+    </replaceStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GradleLocalSettings">
+    <option name="myGradleHomes">
+      <map>
+        <entry key="$PROJECT_DIR$" value="$USER_HOME$/.sdkman/candidates/gradle/4.9" />
+      </map>
+    </option>
+    <option name="myGradleVersions">
+      <map>
+        <entry key="$PROJECT_DIR$" value="4.9" />
+      </map>
+    </option>
+    <option name="availableProjects">
+      <map>
+        <entry>
+          <key>
+            <ExternalProjectPojo>
+              <option name="name" value="lslrkt" />
+              <option name="path" value="$PROJECT_DIR$" />
+            </ExternalProjectPojo>
+          </key>
+          <value>
+            <list>
+              <ExternalProjectPojo>
+                <option name="name" value="lslrkt" />
+                <option name="path" value="$PROJECT_DIR$" />
+              </ExternalProjectPojo>
+            </list>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="availableTasks">
+      <map>
+        <entry key="$PROJECT_DIR$">
+          <value>
+            <list>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays the components produced by root project 'lslrkt'. [incubating]" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="components" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Assembles and tests this project and all projects that depend on it." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="buildDependents" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="inspectClassesForKotlinIC" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays the sub-projects of root project 'lslrkt'." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="projects" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Assembles main classes." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="classes" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays the dependent components of components in root project 'lslrkt'. [incubating]" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="dependentComponents" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays all buildscript dependencies declared in root project 'lslrkt'." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="buildEnvironment" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Runs this project as a JVM application" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="run" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Generates Gradle wrapper files." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="wrapper" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Assembles test classes." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="testClasses" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Generates Javadoc API documentation for the main source code." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="javadoc" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Creates OS specific scripts to run the project as a JVM application." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="startScripts" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Assembles a jar archive containing the main classes." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="jar" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays the configuration model of root project 'lslrkt'. [incubating]" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="model" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Installs the project as a distribution as-is." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="installDist" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Processes main resources." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="processResources" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays the tasks runnable from root project 'lslrkt'." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="tasks" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Assembles the main distributions" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="assembleDist" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Initializes a new Gradle build." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="init" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Generates dokka documentation for Kotlin" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="dokka" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Runs the unit tests." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="test" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Compiles main Java source." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="compileJava" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Compiles the source set 'test'.kotlin." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="compileTestKotlin" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays the insight into a specific dependency in root project 'lslrkt'." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="dependencyInsight" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Runs all checks." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="check" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Assembles the outputs of this project." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="assemble" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Deletes the build directory." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="clean" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Compiles test Java source." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="compileTestJava" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays all dependencies declared in root project 'lslrkt'." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="dependencies" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Processes test resources." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="processTestResources" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays a help message." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="help" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Compiles the source set 'main'.kotlin." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="compileKotlin" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Assembles and tests this project." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="build" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Assembles and tests this project and all projects it depends on." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="buildNeeded" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Bundles the project as a distribution." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="distTar" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Bundles the project as a distribution." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="distZip" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays the properties of root project 'lslrkt'." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="properties" />
+              </ExternalTaskPojo>
+            </list>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="modificationStamps">
+      <map>
+        <entry key="$USER_HOME$/.gradle/gradle.properties" value="1645988956" />
+        <entry key="$PROJECT_DIR$" value="4600484686000" />
+        <entry key="$PROJECT_DIR$/.gradle" value="0" />
+        <entry key="$PROJECT_DIR$/build.gradle" value="1492215193" />
+        <entry key="$PROJECT_DIR$/settings.gradle" value="2624403627" />
+      </map>
+    </option>
+    <option name="projectBuildClasspath">
+      <map>
+        <entry key="$PROJECT_DIR$">
+          <value>
+            <ExternalProjectBuildClasspathPojo>
+              <option name="modulesBuildClasspath">
+                <map>
+                  <entry key="$PROJECT_DIR$">
+                    <value>
+                      <ExternalModuleBuildClasspathPojo>
+                        <option name="entries">
+                          <list>
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-gradle-plugin/1.2.60/4bb67b63227007761b42be9f0a3e50efd4319412/kotlin-gradle-plugin-1.2.60.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.dokka/dokka-gradle-plugin/0.9.17/b9558823557d2871875b9ede12b1a2a141c92f44/dokka-gradle-plugin-0.9.17.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-gradle-plugin-api/1.2.60/84e6172e7e17d67dadd15098664e145495a9ea72/kotlin-gradle-plugin-api-1.2.60.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-compiler-embeddable/1.2.60/98ce8533623aaa36e121844ffddee04fdf401e90/kotlin-compiler-embeddable-1.2.60.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-annotation-processing-gradle/1.2.60/6b880300d011dfc5962e8f24b6f9b7218516108/kotlin-annotation-processing-gradle-1.2.60.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-android-extensions/1.2.60/69596054ff0e04bb3f38cd906dce6854a9d3438d/kotlin-android-extensions-1.2.60.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-compiler-runner/1.2.60/ea3eb364b72be68a73a1c8a2926ba8885b0753d4/kotlin-compiler-runner-1.2.60.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/1.2.60/391695759d8fc80042c2c11bc19fc6f2787be495/kotlin-stdlib-1.2.60.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-script-runtime/1.2.60/f27ad40614f3519cc7b865fc6360b2d7de64f694/kotlin-script-runtime-1.2.60.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-reflect/1.2.60/33af8b35817e4c97a477a6a324032e0591d04f36/kotlin-reflect-1.2.60.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-build-common/1.2.60/d8851797fdab76067e479be29bfb66889078f7fd/kotlin-build-common-1.2.60.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-daemon-client/1.2.60/1a17e9d6ebff47bd8dc8a24d0e4063a4ddc22e84/kotlin-daemon-client-1.2.60.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib-common/1.2.60/d95e6419da840e672342e5d4348f0bdd1d58b84d/kotlin-stdlib-common-1.2.60.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains/annotations/13.0/919f0dfe192fb4e063e7dacadee7f8bb9a2672a9/annotations-13.0.jar" />
+                          </list>
+                        </option>
+                        <option name="path" value="$PROJECT_DIR$" />
+                      </ExternalModuleBuildClasspathPojo>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+              <option name="name" value="lslrkt" />
+              <option name="projectBuildClasspath">
+                <list>
+                  <option value="$USER_HOME$/.sdkman/candidates/gradle/current/lib/gradle-kotlin-dsl-0.18.4.jar" />
+                  <option value="$USER_HOME$/.sdkman/candidates/gradle/current/lib/gradle-kotlin-dsl-provider-plugins-0.18.4.jar" />
+                  <option value="$USER_HOME$/.sdkman/candidates/gradle/current/lib/gradle-kotlin-dsl-tooling-builders-0.18.4.jar" />
+                  <option value="$USER_HOME$/.sdkman/candidates/gradle/current/lib/gradle-kotlin-dsl-tooling-models-0.18.4.jar" />
+                  <option value="$USER_HOME$/.sdkman/candidates/gradle/current/lib/gradle-launcher-4.9.jar" />
+                  <option value="$USER_HOME$/.sdkman/candidates/gradle/current/lib/gradle-runtime-api-info-4.9.jar" />
+                  <option value="$USER_HOME$/.sdkman/candidates/gradle/current/lib/gradle-tooling-api-4.9.jar" />
+                  <option value="$USER_HOME$/.sdkman/candidates/gradle/current/lib/gradle-wrapper-4.9.jar" />
+                  <option value="$USER_HOME$/.sdkman/candidates/gradle/current/lib/gradle-installation-beacon-4.9.jar" />
+                  <option value="$USER_HOME$/.sdkman/candidates/gradle/current/lib/gradle-core-4.9.jar" />
+                  <option value="$USER_HOME$/.sdkman/candidates/gradle/current/lib/gradle-jvm-services-4.9.jar" />
+                  <option value="$USER_HOME$/.sdkman/candidates/gradle/current/lib/gradle-core-api-4.9.jar" />
+                  <option value="$USER_HOME$/.sdkman/candidates/gradle/current/lib/gradle-build-cache-4.9.jar" />
+                  <option value="$USER_HOME$/.sdkman/candidates/gradle/current/lib/gradle-logging-4.9.jar" />
+                  <option value="$USER_HOME$/.sdkman/candidates/gradle/current/lib/gradle-process-services-4.9.jar" />
+                  <option value="$USER_HOME$/.sdkman/candidates/gradle/current/lib/gradle-resources-4.9.jar" />
+                  <option value="$USER_HOME$/.sdkman/candidates/gradle/current/lib/gradle-persistent-cache-4.9.jar" />
+                  <option value="$USER_HOME$/.sdkman/candidates/gradle/current/lib/gradle-native-4.9.jar" />
+                  <option value="$USER_HOME$/.sdkman/candidates/gradle/current/lib/gradle-model-groovy-4.9.jar" />
+                  <option value="$USER_HOME$/.sdkman/candidates/gradle/current/lib/gradle-model-core-4.9.jar" />
+                  <option value="$USER_HOME$/.sdkman/candidates/gradle/current/lib/gradle-base-services-groovy-4.9.jar" />
+                  <option value="$USER_HOME$/.sdkman/candidates/gradle/current/lib/gradle-messaging-4.9.jar" />
+                  <option value="$USER_HOME$/.sdkman/candidates/gradle/current/lib/gradle-base-services-4.9.jar" />
+                  <option value="$USER_HOME$/.sdkman/candidates/gradle/current/lib/gradle-build-option-4.9.jar" />
+                  <option value="$USER_HOME$/.sdkman/candidates/gradle/current/lib/gradle-cli-4.9.jar" />
+                  <option value="$USER_HOME$/.sdkman/candidates/gradle/current/lib/gradle-docs-4.9.jar" />
+                  <option value="$USER_HOME$/.sdkman/candidates/gradle/current/lib/groovy-all-2.4.12.jar" />
+                  <option value="$USER_HOME$/.sdkman/candidates/gradle/current/lib/ant-1.9.11.jar" />
+                  <option value="$USER_HOME$/.sdkman/candidates/gradle/current/lib/ant-launcher-1.9.11.jar" />
+                  <option value="$USER_HOME$/.sdkman/candidates/gradle/current/lib/plugins/gradle-announce-4.9.jar" />
+                  <option value="$USER_HOME$/.sdkman/candidates/gradle/current/lib/plugins/gradle-antlr-4.9.jar" />
+                  <option value="$USER_HOME$/.sdkman/candidates/gradle/current/lib/plugins/gradle-code-quality-4.9.jar" />
+                  <option value="$USER_HOME$/.sdkman/candidates/gradle/current/lib/plugins/gradle-osgi-4.9.jar" />
+                  <option value="$USER_HOME$/.sdkman/candidates/gradle/current/lib/plugins/gradle-signing-4.9.jar" />
+                  <option value="$USER_HOME$/.sdkman/candidates/gradle/current/lib/plugins/gradle-ide-native-4.9.jar" />
+                  <option value="$USER_HOME$/.sdkman/candidates/gradle/current/lib/plugins/gradle-testing-native-4.9.jar" />
+                  <option value="$USER_HOME$/.sdkman/candidates/gradle/current/lib/plugins/gradle-language-native-4.9.jar" />
+                  <option value="$USER_HOME$/.sdkman/candidates/gradle/current/lib/plugins/gradle-plugin-development-4.9.jar" />
+                  <option value="$USER_HOME$/.sdkman/candidates/gradle/current/lib/plugins/gradle-maven-4.9.jar" />
+                  <option value="$USER_HOME$/.sdkman/candidates/gradle/current/lib/plugins/gradle-ide-play-4.9.jar" />
+                  <option value="$USER_HOME$/.sdkman/candidates/gradle/current/lib/plugins/gradle-ide-4.9.jar" />
+                  <option value="$USER_HOME$/.sdkman/candidates/gradle/current/lib/plugins/gradle-scala-4.9.jar" />
+                  <option value="$USER_HOME$/.sdkman/candidates/gradle/current/lib/plugins/gradle-build-comparison-4.9.jar" />
+                  <option value="$USER_HOME$/.sdkman/candidates/gradle/current/lib/plugins/gradle-ear-4.9.jar" />
+                  <option value="$USER_HOME$/.sdkman/candidates/gradle/current/lib/plugins/gradle-platform-play-4.9.jar" />
+                  <option value="$USER_HOME$/.sdkman/candidates/gradle/current/lib/plugins/gradle-javascript-4.9.jar" />
+                  <option value="$USER_HOME$/.sdkman/candidates/gradle/current/lib/plugins/gradle-ivy-4.9.jar" />
+                  <option value="$USER_HOME$/.sdkman/candidates/gradle/current/lib/plugins/gradle-jacoco-4.9.jar" />
+                  <option value="$USER_HOME$/.sdkman/candidates/gradle/current/lib/plugins/gradle-build-init-4.9.jar" />
+                  <option value="$USER_HOME$/.sdkman/candidates/gradle/current/lib/plugins/gradle-plugins-4.9.jar" />
+                  <option value="$USER_HOME$/.sdkman/candidates/gradle/current/lib/plugins/gradle-tooling-api-builders-4.9.jar" />
+                  <option value="$USER_HOME$/.sdkman/candidates/gradle/current/lib/plugins/gradle-test-kit-4.9.jar" />
+                  <option value="$USER_HOME$/.sdkman/candidates/gradle/current/lib/plugins/gradle-language-groovy-4.9.jar" />
+                  <option value="$USER_HOME$/.sdkman/candidates/gradle/current/lib/plugins/gradle-language-scala-4.9.jar" />
+                  <option value="$USER_HOME$/.sdkman/candidates/gradle/current/lib/plugins/gradle-testing-junit-platform-4.9.jar" />
+                  <option value="$USER_HOME$/.sdkman/candidates/gradle/current/lib/plugins/gradle-testing-jvm-4.9.jar" />
+                  <option value="$USER_HOME$/.sdkman/candidates/gradle/current/lib/plugins/gradle-language-java-4.9.jar" />
+                  <option value="$USER_HOME$/.sdkman/candidates/gradle/current/lib/plugins/gradle-language-jvm-4.9.jar" />
+                  <option value="$USER_HOME$/.sdkman/candidates/gradle/current/lib/plugins/gradle-platform-jvm-4.9.jar" />
+                  <option value="$USER_HOME$/.sdkman/candidates/gradle/current/lib/plugins/gradle-platform-native-4.9.jar" />
+                  <option value="$USER_HOME$/.sdkman/candidates/gradle/current/lib/plugins/gradle-diagnostics-4.9.jar" />
+                  <option value="$USER_HOME$/.sdkman/candidates/gradle/current/lib/plugins/gradle-publish-4.9.jar" />
+                  <option value="$USER_HOME$/.sdkman/candidates/gradle/current/lib/plugins/gradle-testing-base-4.9.jar" />
+                  <option value="$USER_HOME$/.sdkman/candidates/gradle/current/lib/plugins/gradle-platform-base-4.9.jar" />
+                  <option value="$USER_HOME$/.sdkman/candidates/gradle/current/lib/plugins/gradle-plugin-use-4.9.jar" />
+                  <option value="$USER_HOME$/.sdkman/candidates/gradle/current/lib/plugins/gradle-dependency-management-4.9.jar" />
+                  <option value="$USER_HOME$/.sdkman/candidates/gradle/current/lib/plugins/gradle-composite-builds-4.9.jar" />
+                  <option value="$USER_HOME$/.sdkman/candidates/gradle/current/lib/plugins/gradle-reporting-4.9.jar" />
+                  <option value="$USER_HOME$/.sdkman/candidates/gradle/current/lib/plugins/gradle-resources-s3-4.9.jar" />
+                  <option value="$USER_HOME$/.sdkman/candidates/gradle/current/lib/plugins/gradle-resources-gcs-4.9.jar" />
+                  <option value="$USER_HOME$/.sdkman/candidates/gradle/current/lib/plugins/gradle-build-cache-http-4.9.jar" />
+                  <option value="$USER_HOME$/.sdkman/candidates/gradle/current/lib/plugins/gradle-resources-http-4.9.jar" />
+                  <option value="$USER_HOME$/.sdkman/candidates/gradle/current/lib/plugins/gradle-resources-sftp-4.9.jar" />
+                  <option value="$USER_HOME$/.sdkman/candidates/gradle/current/lib/plugins/gradle-workers-4.9.jar" />
+                  <option value="$USER_HOME$/.sdkman/candidates/gradle/current/lib/plugins/gradle-version-control-4.9.jar" />
+                  <option value="$USER_HOME$/.sdkman/candidates/gradle/current/lib/plugins/ivy-2.2.0.jar" />
+                </list>
+              </option>
+            </ExternalProjectBuildClasspathPojo>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="projectSyncType">
+      <map>
+        <entry key="$PROJECT_DIR$/../../gradl/learn/app4java" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../../gradl/learn/kotlindsl" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../../java/gxml02" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../../java/gxml03" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../../java/log4j-samples-configModified" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../../java/log4j2Dyn.08" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../../java/log4j2Dyn02a" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../20180524.132401.kotlinkoans" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../clikt/clikt" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$" value="RE_IMPORT" />
+        <entry key="$USER_HOME$/01/kotlin/clikt" value="PREVIEW" />
+        <entry key="$USER_HOME$/07/kotlin/kotlin-logging" value="PREVIEW" />
+      </map>
+    </option>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/lslrkt.sh" />
+        <option value="$PROJECT_DIR$/src/main/java/Log.java" />
+        <option value="$PROJECT_DIR$/src/main/kotlin/Entrypt.kt" />
+        <option value="$PROJECT_DIR$/src/main/kotlin/FSystemScanner.kt" />
+        <option value="$PROJECT_DIR$/src/main/kotlin/Log4j2Build.kt" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="131" />
+    <option name="y" value="172" />
+    <option name="width" value="1407" />
+    <option name="height" value="813" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="PackagesPane" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="lslrkt" type="b2602c69:ProjectViewProjectNode" />
+              <item name="lslrkt" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Course" />
+      <pane id="Scope" />
+      <pane id="AndroidView" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="GO_FMT" value="false" />
+    <property name="NewWatcherDialog.advanced.open" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="android.sdk.path" value="$USER_HOME$/Android/Sdk" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="go.gopath.indexing.explicitly.defined" value="true" />
+    <property name="last_opened_file_path" value="$USER_HOME$/bin/mkbkcpy.sh" />
+    <property name="node.js.path.for.package.stylelint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.stylelint" value="" />
+    <property name="node.js.selected.package.tslint" value="" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="project.structure.last.edited" value="SDKs" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.34464943" />
+    <property name="run.code.analysis.last.selected.profile" value="pBashScripts" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="show.migrate.to.gradle.popup" value="false" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Kotlin.EntryptKt">
+    <configuration default="true" type="Application" factoryName="Application">
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="lslrkt [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="build" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <method v="2" />
+    </configuration>
+    <configuration name="lslrkt [clean]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="clean" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="EntryptKt" type="JetRunConfigurationType" factoryName="Kotlin" nameIsGenerated="true">
+      <module name="lslrkt_main" />
+      <option name="VM_PARAMETERS" value="" />
+      <option name="PROGRAM_PARAMETERS" value="-d  /drpbx/Dropbox/books  -l  $USER_HOME$/Dropbox/tox  -r $USER_HOME$/Dropbox/tox" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" value="EntryptKt" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="TestNG" factoryName="TestNG">
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Kotlin.EntryptKt" />
+      <item itemvalue="Gradle.lslrkt [build]" />
+      <item itemvalue="Gradle.lslrkt [clean]" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Gradle.lslrkt [build]" />
+        <item itemvalue="Gradle.lslrkt [clean]" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="54234041-94dd-48d5-96af-f86ddb9d0d91" name="Default" comment="" />
+      <created>1532896370152</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1532896370152</updated>
+      <workItem from="1532896377376" duration="324000" />
+      <workItem from="1532896842323" duration="3805000" />
+      <workItem from="1532920298956" duration="13618000" />
+      <workItem from="1533051745957" duration="6238000" />
+      <workItem from="1533147384130" duration="66717000" />
+      <workItem from="1533582116596" duration="2106000" />
+      <workItem from="1533584519185" duration="3650000" />
+      <workItem from="1533604909745" duration="7269000" />
+      <workItem from="1533657348698" duration="3227000" />
+      <workItem from="1533666664482" duration="7618000" />
+      <workItem from="1534264969180" duration="391000" />
+      <workItem from="1534265744596" duration="1197000" />
+      <workItem from="1534267188638" duration="88000" />
+      <workItem from="1534267503589" duration="675000" />
+      <workItem from="1534268186786" duration="246000" />
+      <workItem from="1534269330266" duration="363000" />
+      <workItem from="1534269760585" duration="38000" />
+      <workItem from="1534269843655" duration="298000" />
+      <workItem from="1534429895543" duration="235000" />
+    </task>
+    <task id="LOCAL-00001" summary="20180731.000519.394094056">
+      <created>1533010037715</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1533010037715</updated>
+    </task>
+    <task id="LOCAL-00002" summary="20180731.000519.394094056&#10;20180805.164001.771343536">
+      <created>1533501626635</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1533501626636</updated>
+    </task>
+    <task id="LOCAL-00003" summary="20180731.000519.394094056&#10;20180805.164001.771343536&#10;20180806.154303.683560177">
+      <created>1533584681436</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1533584681436</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="118103000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="0" width="1366" height="768" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4986413" weight="0.16463415" />
+      <window_info id="Structure" order="1" sideWeight="0.5013587" side_tool="true" weight="0.25899744" />
+      <window_info id="Designer" order="2" />
+      <window_info id="Image Layers" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Favorites" order="5" sideWeight="0.5013587" side_tool="true" weight="0.25899744" />
+      <window_info id="Learn" order="6" />
+      <window_info id="Capture Tool" order="7" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.7447989" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.72293675" weight="0.62068963" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.1254162" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32963374" />
+      <window_info anchor="bottom" id="SBT Console" order="7" weight="0.32963374" />
+      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.27706325" side_tool="true" weight="0.6185065" />
+      <window_info anchor="bottom" id="sbt-shell-toolwindow" order="9" weight="0.32963374" />
+      <window_info anchor="bottom" id="Terminal" order="10" weight="0.1254162" />
+      <window_info anchor="bottom" id="CheckStyle" order="11" weight="0.32963374" />
+      <window_info anchor="bottom" id="Database Changes" order="12" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Build" order="13" sideWeight="0.4989282" weight="0.3286638" />
+      <window_info anchor="bottom" id="FindBugs-IDEA" order="14" weight="0.32963374" />
+      <window_info anchor="bottom" id="Version Control" order="15" weight="0.32963374" />
+      <window_info anchor="bottom" id="Tail" order="16" />
+      <window_info anchor="bottom" id="Messages" order="17" weight="0.18585297" />
+      <window_info anchor="bottom" id="Inspection Results" order="18" weight="0.32880434" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Gradle" order="3" weight="0.16234756" />
+      <window_info anchor="right" id="Palette" order="4" />
+      <window_info anchor="right" id="sbt" order="5" />
+      <window_info anchor="right" id="Flutter Outline" order="6" />
+      <window_info anchor="right" id="Capture Analysis" order="7" />
+      <window_info anchor="right" id="Maven Projects" order="8" />
+      <window_info anchor="right" id="Database" order="9" />
+      <window_info anchor="right" id="Palette&#9;" order="10" />
+      <window_info anchor="right" id="Theme Preview" order="11" />
+      <window_info anchor="right" id="Flutter Inspector" order="12" />
+      <window_info anchor="right" id="SciView" order="13" />
+      <window_info anchor="right" id="Key Promoter X" order="14" />
+    </layout>
+    <layout-to-restore>
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4986413" weight="0.15938166" />
+      <window_info id="Structure" order="1" sideWeight="0.5013587" side_tool="true" weight="0.25899744" />
+      <window_info id="Designer" order="2" />
+      <window_info id="Image Layers" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Favorites" order="5" sideWeight="0.5013587" side_tool="true" weight="0.25899744" />
+      <window_info id="Learn" order="6" />
+      <window_info id="Capture Tool" order="7" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.7447989" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.15982242" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.1254162" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32963374" />
+      <window_info anchor="bottom" id="SBT Console" order="7" weight="0.32963374" />
+      <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
+      <window_info anchor="bottom" id="sbt-shell-toolwindow" order="9" weight="0.32963374" />
+      <window_info anchor="bottom" id="Terminal" order="10" weight="0.1254162" />
+      <window_info anchor="bottom" id="CheckStyle" order="11" weight="0.32963374" />
+      <window_info anchor="bottom" id="Database Changes" order="12" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Build" order="13" weight="0.3293011" />
+      <window_info anchor="bottom" id="FindBugs-IDEA" order="14" weight="0.32963374" />
+      <window_info anchor="bottom" id="Version Control" order="15" weight="0.32963374" />
+      <window_info anchor="bottom" id="Tail" order="16" />
+      <window_info anchor="bottom" id="Messages" order="17" weight="0.18585297" />
+      <window_info anchor="bottom" id="Inspection Results" order="18" weight="0.32880434" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Gradle" order="3" visible="true" weight="0.16257995" />
+      <window_info anchor="right" id="Palette" order="4" />
+      <window_info anchor="right" id="sbt" order="5" />
+      <window_info anchor="right" id="Flutter Outline" order="6" />
+      <window_info anchor="right" id="Capture Analysis" order="7" />
+      <window_info anchor="right" id="Maven Projects" order="8" />
+      <window_info anchor="right" id="Database" order="9" />
+      <window_info anchor="right" id="Palette&#9;" order="10" />
+      <window_info anchor="right" id="Theme Preview" order="11" />
+      <window_info anchor="right" id="Flutter Inspector" order="12" />
+      <window_info anchor="right" id="SciView" order="13" />
+      <window_info anchor="right" id="Key Promoter X" order="14" />
+    </layout-to-restore>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="20180731.000519.394094056" />
+    <MESSAGE value="20180731.000519.394094056&#10;20180805.164001.771343536" />
+    <MESSAGE value="20180731.000519.394094056&#10;20180805.164001.771343536&#10;20180806.154303.683560177" />
+    <option name="LAST_COMMIT_MESSAGE" value="20180731.000519.394094056&#10;20180805.164001.771343536&#10;20180806.154303.683560177" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/build/scripts/lslrkt" />
+    <entry file="file://$PROJECT_DIR$/src/lslrkt.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3151">
+          <caret line="137" column="33" selection-start-line="137" selection-start-column="33" selection-end-line="137" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Log.java" />
+    <entry file="jar://$USER_HOME$/ssdkmann/candidates/java/9.0.7-zulu/lib/src.zip!/java.base/java/security/AccessController.java" />
+    <entry file="jar://$USER_HOME$/ssdkmann/candidates/java/9.0.7-zulu/lib/src.zip!/java.base/java/nio/file/attribute/PosixFileAttributes.java" />
+    <entry file="jar://$USER_HOME$/ssdkmann/candidates/java/9.0.7-zulu/lib/src.zip!/java.base/java/nio/file/attribute/BasicFileAttributes.java" />
+    <entry file="jar://$USER_HOME$/ssdkmann/candidates/java/9.0.7-zulu/lib/src.zip!/java.base/sun/nio/fs/UnixFileAttributes.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/Entrypt.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="13" selection-start-line="6" selection-end-line="13" />
+          <folding>
+            <element signature="e#0#207#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/FSystemScanner.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="673" column="16" selection-start-line="673" selection-start-column="4" selection-end-line="673" selection-end-column="16" />
+          <folding>
+            <element signature="e#0#527#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/Log4j2Build.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="30" column="2" selection-start-line="30" selection-start-column="2" selection-end-line="30" selection-end-column="2" />
+          <folding>
+            <element signature="e#0#607#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArquillianSettingsConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.34464943" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.34464943" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>Kotlin</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.34464943" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>Python 3.6 interpreter library</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>9</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.34464943" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>lslrkt</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.34464943" />
+                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>Gradle: com.fasterxml.jackson.core:jackson-annotations:2.9.0</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.34464943" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ScopeChooserConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.34464943" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>
